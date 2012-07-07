@@ -11,7 +11,7 @@
 		fails = 0;
 
   function setup(cb) {
-    if (path.existsSync(outDir)) {
+    if (fs.existsSync(outDir)) {
       require('child_process').exec('rm -rf ' + outDir, function () {
         fs.mkdir(outDir, cb);
       });
